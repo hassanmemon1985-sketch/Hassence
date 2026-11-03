@@ -4,6 +4,8 @@
 # Stages all changes (respecting .gitignore), commits and pushes to origin.
 # On first run, Git Credential Manager will ask for your GitHub token;
 # it is cached afterwards so later runs need no credentials.
+#
+# For scheduled DB + content backups, see scripts/backup.bat.
 
 param(
     [string]$Message = "Update Hassence source"

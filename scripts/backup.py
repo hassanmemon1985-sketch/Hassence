@@ -26,10 +26,26 @@ import sys
 import datetime
 import shutil
 import tempfile
+from pathlib import Path
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BACKUP_DIR = os.path.join(REPO_ROOT, "backups")
 CHANGELOG = os.path.join(REPO_ROOT, "BACKUP_CHANGELOG.md")
+
+
+def load_env():
+    """Load BACKUP_DIR/.env if present (KEY=VALUE lines)."""
+    env_file = Path(REPO_ROOT) / "backups" / ".env"
+    if env_file.exists():
+        for line in env_file.read_text().splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            k, v = line.split("=", 1)
+            os.environ.setdefault(k.strip(), v.strip())
+
+
+load_env()
 
 
 def run(cmd, **kwargs):

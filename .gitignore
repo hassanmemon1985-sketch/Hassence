@@ -53,3 +53,6 @@ Readme.html
 
 # --- Embedded clone repo (contains cloned pages; keep out of main repo) ---
 clone/
+
+# --- Backup outputs (DB dumps, content XML, local credentials) ---
+backups/

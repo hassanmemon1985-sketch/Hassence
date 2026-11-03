@@ -37,6 +37,27 @@ The following are **intentionally excluded** via `.gitignore` and must never be 
 
 If the keystore password has ever been shared or pushed elsewhere, rotate it before signing any future app release.
 
+## Automated backups
+
+`scripts/backup.py` exports the live WordPress database (`mysqldump`) and content
+(WP-CLI) to `backups/`, then commits a `BACKUP_CHANGELOG.md` entry and pushes.
+DB dumps and XML stay gitignored — only the changelog + timestamp is committed.
+
+1. Copy `backups/.env.example` → `backups/.env` and fill in real DB credentials.
+2. Register a daily scheduled task:
+
+```cmd
+schtasks /TN HassenceBackup /TR "C:\Users\User\Desktop\Hassence\scripts\backup.bat" /SC DAILY /ST 02:00 /RL HIGHEST
+```
+
+3. Run it once manually to verify:
+
+```cmd
+scripts\backup.bat "Manual test backup"
+```
+
+Credentials are read from `backups/.env` and are gitignored — never commit them.
+
 ## Payments
 
 - Cash on Delivery
