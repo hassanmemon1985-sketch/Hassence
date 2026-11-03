@@ -1,0 +1,3 @@
+name,category,program,mode,merchant_price,link,image_url,description,margin_percent,currency,seo_title,seo_desc
+EXAMPLE affiliate product - delete this row,Women's Fashion,Daraz,affiliate,2499,https://example.com/your-affiliate-link,https://example.com/image.jpg,Short description,,PKR,,
+EXAMPLE dropship product - delete this row,Health & Beauty,Markaz,dropship,1200,https://example.com/supplier-product,https://example.com/image.jpg,Short description,35,PKR,,

@@ -1,0 +1,46 @@
+﻿Type,SKU,Name,Published,Is featured?,Visibility in catalog,Short description,Regular price,Sale price,Categories,In stock?,Stock
+simple,HS-001,Floral Summer Dress,1,1,visible,Floral Summer Dress - sample product. Replace with your own description.,3999,2499,Women's Fashion,1,50
+simple,HS-002,Embroidered Lawn 3-Piece Suit,1,0,visible,Embroidered Lawn 3-Piece Suit - sample product. Replace with your own description.,5999,4499,Women's Fashion,1,50
+simple,HS-003,Cotton Casual Top,1,0,visible,Cotton Casual Top - sample product. Replace with your own description.,1799,1199,Women's Fashion,1,50
+simple,HS-004,Block Heel Sandals,1,0,visible,Block Heel Sandals - sample product. Replace with your own description.,2999,2199,Women's Fashion,1,50
+simple,HS-005,Classic Black Abaya,1,0,visible,Classic Black Abaya - sample product. Replace with your own description.,4999,3799,Women's Fashion,1,50
+simple,HS-006,Slim Fit Formal Shirt,1,1,visible,Slim Fit Formal Shirt - sample product. Replace with your own description.,2599,1799,Men's Fashion,1,50
+simple,HS-007,Regular Fit Denim Jeans,1,0,visible,Regular Fit Denim Jeans - sample product. Replace with your own description.,3999,2799,Men's Fashion,1,50
+simple,HS-008,Kurta Shalwar Set,1,0,visible,Kurta Shalwar Set - sample product. Replace with your own description.,4999,3499,Men's Fashion,1,50
+simple,HS-009,Leather Formal Shoes,1,0,visible,Leather Formal Shoes - sample product. Replace with your own description.,5999,4299,Men's Fashion,1,50
+simple,HS-010,Winter Hoodie,1,0,visible,Winter Hoodie - sample product. Replace with your own description.,3499,2499,Men's Fashion,1,50
+simple,HS-011,Baby Cartoon Romper,1,1,visible,Baby Cartoon Romper - sample product. Replace with your own description.,1299,899,Mother & Baby,1,50
+simple,HS-012,Kids Denim Jacket,1,0,visible,Kids Denim Jacket - sample product. Replace with your own description.,2499,1799,Mother & Baby,1,50
+simple,HS-013,Plush Teddy Bear,1,0,visible,Plush Teddy Bear - sample product. Replace with your own description.,1499,999,Mother & Baby,1,50
+simple,HS-014,Baby Feeding Bottle,1,0,visible,Baby Feeding Bottle - sample product. Replace with your own description.,799,599,Mother & Baby,1,50
+simple,HS-015,Matte Lipstick,1,1,visible,Matte Lipstick - sample product. Replace with your own description.,1199,799,Health & Beauty,1,50
+simple,HS-016,Vitamin C Serum 30ml,1,0,visible,Vitamin C Serum 30ml - sample product. Replace with your own description.,2199,1499,Health & Beauty,1,50
+simple,HS-017,Hydrating Face Wash 150ml,1,0,visible,Hydrating Face Wash 150ml - sample product. Replace with your own description.,850,649,Health & Beauty,1,50
+simple,HS-018,Eau de Parfum for Women 100ml,1,0,visible,Eau de Parfum for Women 100ml - sample product. Replace with your own description.,4999,3499,Health & Beauty,1,50
+simple,HS-019,Wireless Earbuds,1,1,visible,Wireless Earbuds - sample product. Replace with your own description.,5999,3999,Electronic Accessories,1,50
+simple,HS-020,Bluetooth Speaker,1,0,visible,Bluetooth Speaker - sample product. Replace with your own description.,4500,2999,Electronic Accessories,1,50
+simple,HS-021,Power Bank 10000mAh,1,0,visible,Power Bank 10000mAh - sample product. Replace with your own description.,3299,2499,Electronic Accessories,1,50
+simple,HS-022,Phone Case,1,0,visible,Phone Case - sample product. Replace with your own description.,899,499,Electronic Accessories,1,50
+simple,HS-023,Fast Charger 33W,1,0,visible,Fast Charger 33W - sample product. Replace with your own description.,1999,1299,Electronic Accessories,1,50
+simple,HS-024,Smartphone 128GB,1,1,visible,Smartphone 128GB - sample product. Replace with your own description.,49999,42999,Electronic Devices,1,50
+simple,HS-025,Tablet 10 inch,1,0,visible,Tablet 10 inch - sample product. Replace with your own description.,34999,28999,Electronic Devices,1,50
+simple,HS-026,Smart Watch,1,0,visible,Smart Watch - sample product. Replace with your own description.,8999,5499,Electronic Devices,1,50
+simple,HS-027,LED TV 32 inch,1,1,visible,LED TV 32 inch - sample product. Replace with your own description.,29999,24999,TV & Home Appliances,1,50
+simple,HS-028,Air Fryer 5L,1,0,visible,Air Fryer 5L - sample product. Replace with your own description.,12999,9499,TV & Home Appliances,1,50
+simple,HS-029,Electric Kettle 1.7L,1,0,visible,Electric Kettle 1.7L - sample product. Replace with your own description.,3499,2599,TV & Home Appliances,1,50
+simple,HS-030,Basmati Rice 5kg,1,1,visible,Basmati Rice 5kg - sample product. Replace with your own description.,2199,1899,Groceries & Pets,1,50
+simple,HS-031,Cooking Oil 5L,1,0,visible,Cooking Oil 5L - sample product. Replace with your own description.,3299,2899,Groceries & Pets,1,50
+simple,HS-032,Dog Food 2kg,1,0,visible,Dog Food 2kg - sample product. Replace with your own description.,1999,1599,Groceries & Pets,1,50
+simple,HS-033,Cushion Cover Set of 4,1,1,visible,Cushion Cover Set of 4 - sample product. Replace with your own description.,1999,1299,Home & Lifestyle,1,50
+simple,HS-034,LED Table Lamp,1,0,visible,LED Table Lamp - sample product. Replace with your own description.,1799,1199,Home & Lifestyle,1,50
+simple,HS-035,Bedsheet King Size,1,0,visible,Bedsheet King Size - sample product. Replace with your own description.,3499,2499,Home & Lifestyle,1,50
+simple,HS-036,Classic Wrist Watch,1,1,visible,Classic Wrist Watch - sample product. Replace with your own description.,5499,3499,"Watches, Bags & Jewellery",1,50
+simple,HS-037,Leather Handbag,1,0,visible,Leather Handbag - sample product. Replace with your own description.,4999,3299,"Watches, Bags & Jewellery",1,50
+simple,HS-038,Laptop Backpack,1,0,visible,Laptop Backpack - sample product. Replace with your own description.,3499,2599,"Watches, Bags & Jewellery",1,50
+simple,HS-039,Gold-Plated Earrings,1,0,visible,Gold-Plated Earrings - sample product. Replace with your own description.,1299,899,"Watches, Bags & Jewellery",1,50
+simple,HS-040,Running Sneakers,1,1,visible,Running Sneakers - sample product. Replace with your own description.,4499,3299,Sports & Outdoor,1,50
+simple,HS-041,Yoga Mat,1,0,visible,Yoga Mat - sample product. Replace with your own description.,1999,1399,Sports & Outdoor,1,50
+simple,HS-042,Dumbbell Set 10kg,1,0,visible,Dumbbell Set 10kg - sample product. Replace with your own description.,4999,3799,Sports & Outdoor,1,50
+simple,HS-043,Bike Helmet,1,1,visible,Bike Helmet - sample product. Replace with your own description.,3499,2499,Automotive & Motorbike,1,50
+simple,HS-044,Car Phone Holder,1,0,visible,Car Phone Holder - sample product. Replace with your own description.,999,599,Automotive & Motorbike,1,50
+simple,HS-045,Motorbike Cover,1,0,visible,Motorbike Cover - sample product. Replace with your own description.,1499,999,Automotive & Motorbike,1,50

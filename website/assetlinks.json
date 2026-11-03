@@ -1,0 +1,8 @@
+[{
+      "relation": ["delegate_permission/common.handle_all_urls"],
+      "target": {
+        "namespace": "android_app",
+        "package_name": "com.hassence.twa",
+        "sha256_cert_fingerprints": ["39:3D:A4:95:34:3E:78:D4:E7:2C:EA:17:BD:D0:74:60:5A:DA:67:DA:BD:40:96:43:51:76:5F:70:2E:C7:ED:78"]
+      }
+    }]

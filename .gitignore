@@ -1,0 +1,52 @@
+# ============================================================
+# Hassence - gitignore
+# Security: never commit signing keys, app bundles, DB dumps
+# ============================================================
+
+# --- Android signing (SECRET - rotate password if leaked) ---
+signing.keystore
+signing-key-info.txt
+
+# --- Android app bundles (signed, contain keys) ---
+*.apk
+*.aab
+
+# --- Database dumps (contain customer emails, orders, addresses) ---
+*.sql
+
+# --- WordPress full content export (contains all user content) ---
+*.xml
+
+# --- Binary/theme bundles and image archives ---
+*.zip
+*.rar
+*.7z
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.avif
+*.gif
+*.ico
+*.bmp
+
+# --- Large download artifacts ---
+download.png
+website/download.png
+website/images/
+extracted_theme/hassence/assets/
+Renovate sale products/
+
+# --- Build outputs / caches ---
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+
+# --- Scratch / debug ---
+test_write.txt
+test2.txt
+
+# --- Embedded clone repo (contains cloned pages; keep out of main repo) ---
+clone/

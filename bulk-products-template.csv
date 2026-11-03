@@ -1,0 +1,3 @@
+name,price,sale_price,category,description,image_file,image_url
+EXAMPLE product one - delete this row,2499,1999,Women's Fashion,Short description here,photo1.jpg,
+EXAMPLE product two - delete this row,3499,,Health & Beauty,Short description here,,https://example.com/image.jpg

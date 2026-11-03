@@ -1,0 +1,43 @@
+﻿Type,SKU,Name,Published,Is featured?,Visibility in catalog,Short description,Regular price,Sale price,Categories,In stock?,Stock
+simple,HS-001,Floral Summer Dress,1,1,visible,Floral Summer Dress - sample product. Replace with your own description.,3999,2499,Women,1,50
+simple,HS-002,Embroidered Lawn 3-Piece Suit,1,0,visible,Embroidered Lawn 3-Piece Suit - sample product. Replace with your own description.,5999,4499,Women,1,50
+simple,HS-003,Cotton Casual Top,1,0,visible,Cotton Casual Top - sample product. Replace with your own description.,1799,1199,Women,1,50
+simple,HS-004,Chiffon Scarf,1,0,visible,Chiffon Scarf - sample product. Replace with your own description.,999,699,Women,1,50
+simple,HS-005,Winter Wool Coat,1,0,visible,Winter Wool Coat - sample product. Replace with your own description.,7499,4999,Women,1,50
+simple,HS-006,High-Waist Palazzo Pants,1,0,visible,High-Waist Palazzo Pants - sample product. Replace with your own description.,2299,1599,Women,1,50
+simple,HS-007,Classic Black Abaya,1,0,visible,Classic Black Abaya - sample product. Replace with your own description.,4999,3799,Women,1,50
+simple,HS-008,Slim Fit Formal Shirt,1,1,visible,Slim Fit Formal Shirt - sample product. Replace with your own description.,2599,1799,Men,1,50
+simple,HS-009,Regular Fit Denim Jeans,1,0,visible,Regular Fit Denim Jeans - sample product. Replace with your own description.,3999,2799,Men,1,50
+simple,HS-010,Cotton Polo T-Shirt,1,0,visible,Cotton Polo T-Shirt - sample product. Replace with your own description.,1799,1299,Men,1,50
+simple,HS-011,Kurta Shalwar Set,1,0,visible,Kurta Shalwar Set - sample product. Replace with your own description.,4999,3499,Men,1,50
+simple,HS-012,Winter Hoodie,1,0,visible,Winter Hoodie - sample product. Replace with your own description.,3499,2499,Men,1,50
+simple,HS-013,Cotton Trousers,1,0,visible,Cotton Trousers - sample product. Replace with your own description.,2799,,Men,1,50
+simple,HS-014,Cartoon Print T-Shirt,1,1,visible,Cartoon Print T-Shirt - sample product. Replace with your own description.,899,599,Kids,1,50
+simple,HS-015,Kids Denim Jacket,1,0,visible,Kids Denim Jacket - sample product. Replace with your own description.,2499,1799,Kids,1,50
+simple,HS-016,School Backpack,1,0,visible,School Backpack - sample product. Replace with your own description.,2299,1599,Kids,1,50
+simple,HS-017,Plush Teddy Bear,1,0,visible,Plush Teddy Bear - sample product. Replace with your own description.,1499,999,Kids,1,50
+simple,HS-018,Remote Control Car,1,0,visible,Remote Control Car - sample product. Replace with your own description.,2799,1899,Kids,1,50
+simple,HS-019,Block Heel Sandals,1,1,visible,Block Heel Sandals - sample product. Replace with your own description.,2999,2199,Shoes,1,50
+simple,HS-020,Leather Formal Shoes,1,0,visible,Leather Formal Shoes - sample product. Replace with your own description.,5999,4299,Shoes,1,50
+simple,HS-021,Running Sneakers,1,0,visible,Running Sneakers - sample product. Replace with your own description.,4499,3299,Shoes,1,50
+simple,HS-022,Kolhapuri Chappal,1,0,visible,Kolhapuri Chappal - sample product. Replace with your own description.,1999,1499,Shoes,1,50
+simple,HS-023,Leather Handbag,1,1,visible,Leather Handbag - sample product. Replace with your own description.,4999,3299,Bags,1,50
+simple,HS-024,Crossbody Bag,1,0,visible,Crossbody Bag - sample product. Replace with your own description.,2999,2199,Bags,1,50
+simple,HS-025,Laptop Backpack,1,0,visible,Laptop Backpack - sample product. Replace with your own description.,3499,2599,Bags,1,50
+simple,HS-026,Evening Clutch,1,0,visible,Evening Clutch - sample product. Replace with your own description.,2499,1799,Bags,1,50
+simple,HS-027,Matte Lipstick,1,1,visible,Matte Lipstick - sample product. Replace with your own description.,1199,799,Beauty,1,50
+simple,HS-028,Vitamin C Serum 30ml,1,0,visible,Vitamin C Serum 30ml - sample product. Replace with your own description.,2199,1499,Beauty,1,50
+simple,HS-029,Hydrating Face Wash 150ml,1,0,visible,Hydrating Face Wash 150ml - sample product. Replace with your own description.,850,649,Beauty,1,50
+simple,HS-030,Sunscreen SPF50 60ml,1,0,visible,Sunscreen SPF50 60ml - sample product. Replace with your own description.,1699,1299,Beauty,1,50
+simple,HS-031,Nail Polish Set of 6,1,0,visible,Nail Polish Set of 6 - sample product. Replace with your own description.,999,699,Beauty,1,50
+simple,HS-032,Eau de Parfum for Women 100ml,1,0,visible,Eau de Parfum for Women 100ml - sample product. Replace with your own description.,4999,3499,Beauty,1,50
+simple,HS-033,Wireless Earbuds,1,1,visible,Wireless Earbuds - sample product. Replace with your own description.,5999,3999,Electronics,1,50
+simple,HS-034,Smart Watch,1,0,visible,Smart Watch - sample product. Replace with your own description.,8999,5499,Electronics,1,50
+simple,HS-035,Bluetooth Speaker,1,0,visible,Bluetooth Speaker - sample product. Replace with your own description.,4500,2999,Electronics,1,50
+simple,HS-036,Power Bank 10000mAh,1,0,visible,Power Bank 10000mAh - sample product. Replace with your own description.,3299,2499,Electronics,1,50
+simple,HS-037,Phone Case,1,0,visible,Phone Case - sample product. Replace with your own description.,899,499,Electronics,1,50
+simple,HS-038,Fast Charger 33W,1,0,visible,Fast Charger 33W - sample product. Replace with your own description.,1999,1299,Electronics,1,50
+simple,HS-039,Cushion Cover Set of 4,1,1,visible,Cushion Cover Set of 4 - sample product. Replace with your own description.,1999,1299,Home,1,50
+simple,HS-040,LED Table Lamp,1,0,visible,LED Table Lamp - sample product. Replace with your own description.,1799,1199,Home,1,50
+simple,HS-041,Non-Stick Fry Pan,1,0,visible,Non-Stick Fry Pan - sample product. Replace with your own description.,2599,1899,Home,1,50
+simple,HS-042,Bedsheet King Size,1,0,visible,Bedsheet King Size - sample product. Replace with your own description.,3499,2499,Home,1,50
