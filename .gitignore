@@ -48,5 +48,8 @@ Thumbs.db
 test_write.txt
 test2.txt
 
+# --- PWA Builder redirect stub (replaced by README.md) ---
+Readme.html
+
 # --- Embedded clone repo (contains cloned pages; keep out of main repo) ---
 clone/
