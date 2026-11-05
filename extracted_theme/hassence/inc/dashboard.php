@@ -106,7 +106,7 @@ function hs_orders_page() {
  $id = $o->get_id(); $st = $o->get_status();
  $name = trim($o->get_billing_first_name() . ' ' . $o->get_billing_last_name());
  $phone = $o->get_billing_phone(); $wa = hs_wa_digits($phone);
- $items = []; foreach ($o->get_items() as $it) $items[] = $it->get_name() . ' × ' . $it->get_quantity();
+ $items = []; foreach ($o->get_items() as $it) $items[] = $it->get_name() . ($it->get_meta('Size') ? ' (Size ' . $it->get_meta('Size') . ')' : '') . ' × ' . $it->get_quantity();
  $tid = $o->get_meta('_hs_ep_tid'); $purl = hs_proof_url($o->get_meta('_hs_ep_proof'));
  $d = $o->get_date_created();
  $hay = strtolower($id . ' ' . $name . ' ' . $phone . ' ' . $o->get_billing_email());
@@ -128,7 +128,7 @@ function hs_orders_page() {
 <h2>Order #<?php echo (int) $id; ?> <span class="chip st-<?php echo esc_attr($st); ?>"><?php echo esc_html(hs_st_label($st)); ?></span></h2>
 <p><b><?php echo esc_html($name); ?></b><br><?php echo esc_html($phone); ?><br><?php echo esc_html($o->get_billing_email()); ?></p>
 <p><b>Delivery address</b><br><?php echo wp_kses_post($o->get_formatted_billing_address() ? $o->get_formatted_billing_address() : '—'); ?></p>
-<table><?php foreach ($o->get_items() as $it) echo '<tr><td>' . esc_html($it->get_name()) . ' × ' . (int) $it->get_quantity() . '</td><td>' . wp_kses_post(wc_price($it->get_total())) . '</td></tr>'; ?>
+<table><?php foreach ($o->get_items() as $it) echo '<tr><td>' . esc_html($it->get_name()) . ($it->get_meta('Size') ? ' <b>(Size ' . esc_html($it->get_meta('Size')) . ')</b>' : '') . ' × ' . (int) $it->get_quantity() . '</td><td>' . wp_kses_post(wc_price($it->get_total())) . '</td></tr>'; ?>
 <?php foreach ($o->get_fees() as $f) echo '<tr><td>' . esc_html($f->get_name()) . '</td><td>' . wp_kses_post(wc_price($f->get_total())) . '</td></tr>'; ?>
 <tr><td><b>Total</b></td><td><b><?php echo wp_kses_post(wc_price($o->get_total())); ?></b></td></tr></table>
 <p><b>Payment:</b> <?php echo esc_html($o->get_payment_method_title()); ?><?php if ($tid) echo '<br><b>Transaction ID:</b> ' . esc_html($tid); ?></p>

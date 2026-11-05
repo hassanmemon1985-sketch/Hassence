@@ -53,6 +53,7 @@ function hs_catdd(){
  echo '</div></div>';
 }
 function hs_nav(){
+ if(function_exists('is_account_page')&&is_account_page())return;
  echo '<header><nav><div class="wrap">';
  hs_catdd();
  echo '</div></nav></header>';
@@ -66,11 +67,14 @@ function hs_card($p){
   $r=(float)$p->get_regular_price();$s=(float)$p->get_sale_price();
   $badge=($p->is_type('simple')&&$r>0&&$s>0)?'<span class="badge">-'.round((1-$s/$r)*100).'%</span>':'<span class="badge">SALE</span>';
  }
+ $badge.=hs_prog_badge($id);
  $tt=get_the_terms($id,'product_cat');$ic=($tt&&!is_wp_error($tt))?hs_cat_icon($tt[0]):hs_emoji();
  $img=$p->get_image_id()?wp_get_attachment_image($p->get_image_id(),'woocommerce_thumbnail'):'<span class="ph">'.$ic.'</span>';
  $dc=$p->get_date_created();
  echo '<div class="p" data-cat="'.esc_attr(implode(' ',$terms)).'" data-name="'.esc_attr(strtolower($p->get_name())).'" data-price="'.esc_attr((float)$p->get_price()).'" data-pop="'.(int)$p->get_total_sales().'" data-date="'.($dc?$dc->getTimestamp():0).'"><div class="img"><a class="imga" href="'.esc_url($p->get_permalink()).'">'.$img.'</a>'.$badge;
- if($p->is_purchasable()&&$p->is_in_stock()){
+ if($p->is_purchasable()&&$p->is_in_stock()&&get_post_meta($id,'_hs_sizes',true)){
+  echo '<a class="cart" href="'.esc_url($p->get_permalink()).'" aria-label="Choose a size">+</a>';
+ }elseif($p->is_purchasable()&&$p->is_in_stock()){
   printf('<a href="%s" data-quantity="1" data-product_id="%d" data-product_sku="%s" class="cart add_to_cart_button %s product_type_%s" aria-label="Add to cart" rel="nofollow">+</a>',esc_url($p->add_to_cart_url()),$id,esc_attr($p->get_sku()),$p->supports('ajax_add_to_cart')?'ajax_add_to_cart':'',esc_attr($p->get_type()));
  }
  echo '</div><div class="nm"><a href="'.esc_url($p->get_permalink()).'">'.esc_html($p->get_name()).'</a></div><div class="pr">'.$p->get_price_html().'</div>';
@@ -125,7 +129,7 @@ add_action('init',function(){
 
 function hs_cat_icon($t){
  $n=strtolower(is_object($t)?$t->name:(string)$t);
- $map=['tv'=>'📺','appliance'=>'📺','watch'=>'⌚','jewel'=>'💍','accessor'=>'🎧','device'=>'📱','beauty'=>'💄','health'=>'💄','baby'=>'🍼','mother'=>'🍼','grocer'=>'🛒','pet'=>'🐾','lifestyle'=>'🛋️','home'=>'🛋️','women'=>'👗','men'=>'👔','sport'=>'⚽','outdoor'=>'⚽','motor'=>'🏍️','auto'=>'🏍️','bag'=>'👜'];
+ $map=['daraz'=>'⚡','tv'=>'📺','appliance'=>'📺','watch'=>'⌚','jewel'=>'💍','accessor'=>'🎧','device'=>'📱','beauty'=>'💄','health'=>'💄','baby'=>'🍼','mother'=>'🍼','grocer'=>'🛒','pet'=>'🐾','lifestyle'=>'🛋️','home'=>'🛋️','women'=>'👗','men'=>'👔','sport'=>'⚽','outdoor'=>'⚽','motor'=>'🏍️','auto'=>'🏍️','bag'=>'👜'];
  foreach($map as $k=>$e){if(strpos($n,$k)!==false)return $e;}
  return '🛍️';
 }
@@ -206,6 +210,7 @@ add_action('woocommerce_single_product_summary',function(){
  echo '<div class="pdp-cat">'.wc_get_product_category_list($product->get_id(),', ').'</div>';
 },4);
 add_action('woocommerce_single_product_summary',function(){
+ global $product;if($product&&function_exists('hs_is_aff')&&hs_is_aff($product->get_id()))return;
  echo '<p class="pdp-shiplabel">'.esc_html(get_theme_mod('hs_ship_label','Shipping calculated at checkout.')).'</p>';
 },11);
 add_action('woocommerce_before_add_to_cart_quantity',function(){
@@ -216,7 +221,7 @@ add_action('woocommerce_after_add_to_cart_quantity',function(){
  echo '<ul class="pdp-notes">';foreach(hs_notes($product) as $n)echo '<li>✓ '.esc_html($n).'</li>';echo '</ul>';
 });
 add_action('woocommerce_after_add_to_cart_button',function(){
- global $product;if(!$product)return;
+ global $product;if(!$product||$product->is_type('external'))return;
  $u=esc_url(add_query_arg('hs_buy_now',1,get_permalink($product->get_id())));
  echo '<button type="submit" class="buy-now"'.($product->is_type('simple')?' name="add-to-cart" value="'.(int)$product->get_id().'"':'').' formaction="'.$u.'">Buy now</button>';
 });
@@ -264,6 +269,7 @@ add_action('wp_head',function(){
    $title=$p->get_name().' - '.$site;$url=get_permalink($p->get_id());$type='product';
    $d=wp_strip_all_tags($p->get_short_description()?$p->get_short_description():$p->get_description());
    $desc=$d?wp_trim_words($d,30,'...'):'Buy '.$p->get_name().' on '.$site.'.';
+   $sd=get_post_meta($p->get_id(),'_hs_seo_desc',true);if($sd)$desc=$sd;
    if($p->get_image_id()){$s=wp_get_attachment_image_src($p->get_image_id(),'full');if($s)$img=$s[0];}
    if($p->get_price()!=='')$extra='<meta property="product:price:amount" content="'.esc_attr($p->get_price()).'"><meta property="product:price:currency" content="'.esc_attr(get_woocommerce_currency()).'">';
   }
@@ -316,7 +322,7 @@ add_action('customize_register',function($c){
  $c->add_control('hs_site_desc',['label'=>'Description shown on Google and when the site is shared','section'=>'hs_desc','type'=>'textarea']);
 });
 require_once get_template_directory() . '/inc/pages.php';
-if (class_exists('WooCommerce')) { require_once get_template_directory() . '/inc/checkout.php'; require_once get_template_directory() . '/inc/emails.php'; require_once get_template_directory() . '/inc/dashboard.php'; }
+if (class_exists('WooCommerce')) { require_once get_template_directory() . '/inc/checkout.php'; require_once get_template_directory() . '/inc/emails.php'; require_once get_template_directory() . '/inc/dashboard.php'; require_once get_template_directory() . '/inc/affiliate.php'; require_once get_template_directory() . '/inc/importer.php'; require_once get_template_directory() . '/inc/passwords.php'; require_once get_template_directory() . '/inc/country.php'; require_once get_template_directory() . '/inc/account.php'; require_once get_template_directory() . '/inc/bulk.php'; require_once get_template_directory() . '/inc/sizes.php'; require_once get_template_directory() . '/inc/daraz.php'; require_once get_template_directory() . '/inc/currency.php'; }
 
 /* ---------- Courier charge: one charge per order (highest applies) ---------- */
 function hs_courier_total($cart){
@@ -335,3 +341,14 @@ add_action('woocommerce_cart_calculate_fees',function($cart){
  if($t>0)$cart->add_fee('Courier charges',$t,false);
 });
 require_once get_template_directory() . '/inc/app.php';
+
+/* ---------- Small Buy now button beside the price ---------- */
+add_action('init',function(){
+ remove_action('woocommerce_single_product_summary','woocommerce_template_single_price',10);
+ add_action('woocommerce_single_product_summary',function(){
+  global $product;if(!$product)return;
+  echo '<div class="pdp-pricerow"><p class="price">'.$product->get_price_html().'</p>';
+  if($product->is_purchasable()&&$product->is_in_stock()&&!$product->is_type('external'))echo '<button type="button" class="buy-mini">⚡ Buy now</button>';
+  echo '</div>';
+ },10);
+},30);

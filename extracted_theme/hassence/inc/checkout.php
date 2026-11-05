@@ -15,9 +15,9 @@ add_filter('woocommerce_checkout_fields', function ($f) {
   $b[$k] = array_merge($b[$k], ['label' => $label, 'placeholder' => $label, 'priority' => $prio, 'required' => $req, 'class' => ['form-row-wide']], $extra);
  };
  $set('billing_phone', 'Mobile phone number', 5, true);
- $set('billing_email', 'Email (your order confirmation is sent here)', 6, true);
+ $set('billing_email', 'Email (optional)', 6, false);
  $set('billing_first_name', 'First name (optional)', 50, false);
- $set('billing_last_name', 'Last name', 60, true);
+ $set('billing_last_name', 'Last name (optional)', 60, false);
  $set('billing_address_1', 'Address', 70, true);
  $set('billing_address_2', 'Apartment, suite, etc. (optional)', 80, false);
  $set('billing_city', 'City', 90, true);
@@ -65,8 +65,15 @@ add_action('woocommerce_review_order_before_submit', function () {
  $cart = WC()->cart; $img = '';
  foreach ($cart->get_cart() as $it) { $img = $it['data']->get_image('thumbnail'); break; }
  $n = $cart->get_cart_contents_count();
- echo '<div class="co-total"><span class="co-th">' . $img . '</span><div><b>Total</b><br><small>' . $n . ($n === 1 ? ' item' : ' items') . '</small></div><div class="co-amt">' . wp_kses_post($cart->get_total()) . '</div></div>';
+ echo '<div class="co-total"><span class="co-th">' . $img . '</span><div><b>Total</b><br><small>' . $n . ($n === 1 ? ' item' : ' items') . '</small></div><div class="co-amt">' . wp_kses_post($cart->get_total()) . '</div></div><p class="cur-note">Prices on this page are charged in PKR.</p>';
 });
 add_action('woocommerce_after_checkout_form', function () {
  echo '<p class="co-terms"><a href="' . esc_url(hs_page_url('return-refund-policy')) . '">Terms and policies</a></p>';
 });
+
+add_filter('the_content', function ($c) {
+ if (!in_the_loop() || !is_main_query()) return $c;
+ if (function_exists('is_checkout') && is_checkout() && has_block('woocommerce/checkout', $c)) return do_shortcode('[woocommerce_checkout]');
+ if (function_exists('is_cart') && is_cart() && has_block('woocommerce/cart', $c)) return do_shortcode('[woocommerce_cart]');
+ return $c;
+}, 5);

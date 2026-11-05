@@ -3,7 +3,7 @@ Theme Name: Hassence
 Theme URI: https://hassence.com
 Author: Hassence
 Description: Fashion & lifestyle WooCommerce theme with top slideshow, flash sale bar, category circles, deal boxes and product grid.
-Version: 2.7.0
+Version: 3.6.0
 Requires at least: 6.0
 Requires PHP: 7.4
 License: GPL-2.0-or-later
@@ -420,3 +420,102 @@ body.hs-co .woocommerce-privacy-policy-text{font-size:12px;color:var(--mut)}
 .app-no{background:none;border:1px solid var(--bd);color:var(--tx);border-radius:30px;padding:10px 20px;font-weight:700;cursor:pointer}
 .app-fab{position:fixed;right:14px;bottom:92px;z-index:80;background:var(--card);color:var(--tx);border:1px solid var(--bd);border-radius:30px;padding:8px 14px;font-size:13px;font-weight:700;box-shadow:0 4px 14px rgba(0,0,0,.25)}
 @media(max-width:700px){.app-pop{bottom:calc(150px + env(safe-area-inset-bottom,0px))}.app-fab{bottom:calc(144px + env(safe-area-inset-bottom,0px))}}
+
+.prog{position:absolute;left:8px;bottom:8px;color:#fff;font-size:11px;font-weight:800;padding:3px 9px;border-radius:30px;letter-spacing:.3px;z-index:3}
+.aff-note{font-size:13px;color:var(--mut);margin:10px 0}.aff-note .prog{position:static;display:inline-block;margin-right:6px}
+
+/* Buy now: small button beside the price (the big one stays hidden) */
+.buy-now{display:none!important}
+.pdp-pricerow{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:6px 0 0}
+.pdp-pricerow p.price{margin:0!important}
+.buy-mini{background:linear-gradient(90deg,#e0245e,#ff6a3d);color:#fff;border:0;border-radius:30px;padding:7px 14px;font-size:12px;font-weight:800;cursor:pointer;letter-spacing:.3px}
+.get-app{font-weight:700}
+/* checkout boxes: dark, clearly visible text */
+body.hs-co .input-text,body.hs-co input[type=text],body.hs-co input[type=tel],body.hs-co input[type=email],body.hs-co textarea,body.hs-co select,body.hs-co .select2-container .select2-selection--single{background:#fff!important;color:#111!important;border:1px solid #c9ced4!important;-webkit-text-fill-color:#111}
+body.hs-co .input-text::placeholder,body.hs-co textarea::placeholder{color:#5f6670!important;opacity:1;-webkit-text-fill-color:#5f6670}
+body.hs-co .select2-container--default .select2-selection--single .select2-selection__rendered{color:#111!important}
+body.hs-co .select2-dropdown,body.hs-co .select2-search__field{background:#fff!important;color:#111!important}
+body.hs-co .select2-results__option{color:#111!important}
+body.hs-co .input-text:focus{outline:2px solid #e0245e;outline-offset:1px}
+
+.hs-ok{background:#e7f6ec;color:#0b6b31;border-radius:8px;padding:10px 14px;margin:10px 0}
+.hs-bad{background:#fdeaea;color:#8f1d1d;border-radius:8px;padding:10px 14px;margin:10px 0}
+.hs-note{background:#fff6e0;color:#7a4a00;border-radius:8px;padding:10px 14px;margin:10px 0}
+.hs-vf input[type=password]{display:block;width:100%;margin-top:4px;padding:12px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx);font-size:16px}
+
+.flag{font-size:1.15em;vertical-align:middle;margin-left:4px}
+.acct{display:inline-flex;align-items:center;gap:4px;font-size:13px}
+.acct-n{font-weight:700;max-width:90px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+@media(max-width:700px){.acct-n{display:none}}
+.cursel{background:rgba(0,0,0,.35);color:#fff;border:0;border-radius:20px;padding:3px 8px;font-size:12px;font-weight:700}
+.cursel option{color:#111}
+.fx{display:block;font-size:12px;color:var(--mut);font-weight:600}.fx:empty{display:none}
+.fx-all{font-size:13px;color:var(--mut);margin:2px 0 6px}.fx-all:empty{display:none}
+.pdp-pricerow .price .fx{display:none}
+.co-amt .fx,.co-sum summary b .fx{text-align:right}
+.hs-cs{width:100%;padding:10px;border:1px solid var(--bd);border-radius:8px;background:var(--card);color:var(--tx)}
+
+.hs-det{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:14px 16px;margin:16px 0}
+.hs-det h3{margin:0 0 8px;font-size:18px}.hs-det table{width:100%;border-collapse:collapse}
+.hs-det th{width:38%;text-align:left;color:var(--mut);font-weight:600;padding:7px 0;border-bottom:1px solid var(--bd);vertical-align:top}.hs-det td{padding:7px 0;border-bottom:1px solid var(--bd)}
+.hs-na{color:var(--mut)}
+fieldset legend{padding:0 6px}
+
+/* category rows on the home page */
+.crow{display:grid;grid-template-columns:96px minmax(0,1fr);gap:8px;margin:14px 0;align-items:stretch}
+.crow-head{background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 6px;text-align:center;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;font-size:12px;font-weight:800;line-height:1.25}
+.crow-head .ci{width:54px;height:54px;font-size:28px}
+.crow-head small{color:var(--sale);font-weight:700;font-size:11px}
+.crow-wrap{position:relative;min-width:0}
+.crow-track{display:flex;gap:8px;overflow-x:auto;scroll-snap-type:x proximity;scrollbar-width:none;padding:2px}
+.crow-track::-webkit-scrollbar{display:none}
+.crow-track .p{flex:0 0 128px;scroll-snap-align:start}
+.crow-track .p .nm{font-size:12px;height:32px;margin-top:6px}.crow-track .p .pr{font-size:14px}.crow-track .p .rt{display:none}
+.crow-all{flex:0 0 92px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;border:1px dashed var(--bd);border-radius:10px;font-weight:800;font-size:13px;text-align:center;color:var(--sale);scroll-snap-align:end}
+.crow-all small{color:var(--mut);font-weight:600;font-size:11px}.crow-all b{font-size:22px;line-height:1}
+.car{position:absolute;top:34%;z-index:5;width:28px;height:28px;border-radius:50%;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;display:none;line-height:1;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+.car.l{left:-10px}.car.r{right:-10px}
+@media(min-width:701px){.car{display:block}.crow{grid-template-columns:130px minmax(0,1fr)}.crow-track .p{flex-basis:150px}.crow-head .ci{width:64px;height:64px;font-size:32px}.crow-head{font-size:13px}}
+
+/* one price at a time */
+.fx{display:inline!important;font-size:inherit!important;color:inherit!important;font-weight:inherit!important}
+.fx:empty{display:none!important}
+.cur-conv .pk{display:none!important}
+.pdp-pricerow .price .fx{display:inline!important}
+.fx-all{display:none!important}
+.cur-note{display:none;font-size:12px;color:#bbb;margin:6px 0}.cur-conv .cur-note{display:block}
+/* sizes under the title */
+.pdp-sizes{margin:8px 0 10px}.pdp-sizes b{display:block;font-size:13px;margin-bottom:6px}
+.pdp-sizes .sz{display:flex;flex-wrap:wrap;gap:8px}
+.sz-c{position:relative;cursor:pointer}.sz-c input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.sz-c span{display:inline-flex;min-width:46px;height:40px;align-items:center;justify-content:center;border:1px solid var(--bd);border-radius:8px;padding:0 12px;font-weight:800;background:var(--card);color:var(--tx)}
+.sz-c input:checked+span{background:var(--tx);color:var(--bg);border-color:var(--tx)}
+.sz-c input:focus-visible+span{outline:2px solid var(--sale);outline-offset:2px}
+.pdp-sizes small{display:block;color:var(--mut);margin-top:6px;font-size:12px}
+.pdp-sizes.need b{color:#e0245e}.pdp-sizes.need .sz-c span{border-color:#e0245e}
+/* checkout boxes: black with bold white text (classic and block checkout) */
+body.hs-co input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=submit]):not([type=hidden]),body.hs-co textarea,body.hs-co select,body.hs-co .select2-container .select2-selection--single,body.hs-co .wc-block-components-text-input input,body.hs-co .wc-block-components-textarea,body.hs-co .wc-blocks-components-select__select{background:#000!important;color:#fff!important;font-weight:700!important;border:1px solid #666!important;border-radius:12px!important;-webkit-text-fill-color:#fff!important;caret-color:#fff}
+body.hs-co input::placeholder,body.hs-co textarea::placeholder{color:#c4c4c4!important;opacity:1!important;-webkit-text-fill-color:#c4c4c4!important;font-weight:600}
+body.hs-co input:-webkit-autofill,body.hs-co textarea:-webkit-autofill,body.hs-co select:-webkit-autofill{-webkit-box-shadow:0 0 0 1000px #000 inset!important;-webkit-text-fill-color:#fff!important}
+body.hs-co .select2-container--default .select2-selection--single .select2-selection__rendered,body.hs-co .select2-selection__rendered{color:#fff!important;font-weight:700!important}
+body.hs-co .select2-dropdown,body.hs-co .select2-search__field,body.hs-co .select2-results__option{background:#000!important;color:#fff!important}
+body.hs-co .select2-results__option--highlighted{background:#e0245e!important}
+body.hs-co select option{background:#000;color:#fff}
+body.hs-co .wc-block-components-text-input label{color:#ddd!important;font-weight:600}
+body.hs-co input:focus,body.hs-co textarea:focus,body.hs-co select:focus{outline:2px solid #e0245e!important;outline-offset:1px}
+
+/* category rows slide by themselves */
+.crow-track{scroll-snap-type:none!important}
+/* Daraz Deals: flash-style logo */
+.dz-logo{position:relative;display:inline-flex;align-items:center;gap:4px;background:#f85606;color:#fff;border-radius:8px;padding:6px 12px;font-weight:900;letter-spacing:1.5px;overflow:hidden;animation:dzpulse 1.8s infinite;vertical-align:middle}
+.dz-logo img{height:26px;width:auto;display:block}
+.dz-bolt{animation:dzflash 1s steps(2,end) infinite}
+.dz-shine{position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.65),transparent);transform:skewX(-20deg);animation:dzshine 2.2s infinite}
+.dz-md{font-size:16px}.dz-lg{font-size:24px;padding:10px 20px}.dz-lg img{height:40px}
+@keyframes dzshine{0%{left:-60%}60%,100%{left:130%}}
+@keyframes dzflash{50%{opacity:.25}}
+@keyframes dzpulse{0%{box-shadow:0 0 0 0 rgba(248,86,6,.6)}70%{box-shadow:0 0 0 12px rgba(248,86,6,0)}100%{box-shadow:0 0 0 0 rgba(248,86,6,0)}}
+.dz-strip{display:flex;align-items:center;gap:12px;background:var(--card);border:1px solid var(--bd);border-radius:10px;padding:10px 14px;margin:14px 0 0;font-weight:700}
+.dz-strip span{margin-left:auto;color:var(--mut);font-weight:600;font-size:13px}
+.dz-head{margin:6px 0 16px}.dz-head p{margin-top:10px;color:var(--mut);font-size:14px;max-width:70ch}
+@media(prefers-reduced-motion:reduce){.dz-logo,.dz-bolt,.dz-shine{animation:none}}

@@ -12,28 +12,23 @@ $shop = wc_get_page_permalink('shop');
 $cats = hs_get_cats();
 ?>
 <main class="wrap">
-<div class="tabwrap"><button type="button" class="tabarr l" aria-label="Scroll left">‹</button>
-<div class="tabs" id="tabs">
-<button class="tab on" data-t="all">All</button>
-<?php foreach ($cats as $c) : ?><button class="tab" data-t="<?php echo esc_attr($c->slug); ?>"><?php echo hs_cat_icon($c) . ' ' . esc_html($c->name); ?></button><?php endforeach; ?>
-</div><button type="button" class="tabarr r" aria-label="Scroll right">›</button></div>
+<?php if (get_theme_mod('hs_daraz_strip', true) && function_exists('hs_daraz_logo')) : ?><a class="dz-strip" href="<?php echo esc_url(hs_page_url('daraz')); ?>"><?php echo hs_daraz_logo('md'); ?><span>Partner deals from Daraz ›</span></a><?php endif; ?>
+<div class="hotrow"><?php hs_catdd(); ?></div>
 
-<div class="hotrow">
-<?php hs_catdd(); ?>
-<label class="sortbox"><select id="sortSel" aria-label="Sort products">
-<option value="az">Sort: A to Z</option>
-<option value="za">Sort: Z to A</option>
-<option value="low">Sort: Price low to high</option>
-<option value="high">Sort: Price high to low</option>
-<option value="pop">Sort: Most popular</option>
-<option value="new" selected>Sort: New added</option>
-</select></label>
-</div>
-<div class="grid" id="grid">
-<?php $prods = hs_q(['limit' => 60, 'orderby' => 'date', 'order' => 'DESC']);
-if ($prods) { foreach ($prods as $p) hs_card($p); } else { echo '<div class="empty">No products yet. Add them in WordPress → Products → Add New.</div>'; } ?>
-</div>
-<div class="more"><a href="<?php echo esc_url($shop); ?>"><button type="button">VIEW ALL PRODUCTS</button></a></div>
+<?php $shown = 0; foreach ($cats as $c) :
+ $items = hs_q(['limit' => 12, 'category' => [$c->slug], 'orderby' => 'date', 'order' => 'DESC']);
+ if (!$items) continue; $shown++;
+ $tid = get_term_meta($c->term_id, 'thumbnail_id', true); $link = esc_url(get_term_link($c)); ?>
+<section class="crow">
+<a class="crow-head" href="<?php echo $link; ?>"><span class="ci"><?php echo $tid ? wp_get_attachment_image($tid, 'thumbnail') : hs_cat_icon($c); ?></span><span class="crow-n"><?php echo esc_html($c->name); ?></span><small>View all ›</small></a>
+<div class="crow-wrap"><button type="button" class="car l" aria-label="Scroll left">‹</button>
+<div class="crow-track"><?php foreach ($items as $p) hs_card($p); ?><a class="crow-all" href="<?php echo $link; ?>"><span>View all</span><small><?php echo esc_html($c->name); ?></small><b>›</b></a></div>
+<button type="button" class="car r" aria-label="Scroll right">›</button></div>
+</section>
+<?php endforeach; ?>
+<?php if (!$shown) echo '<div class="empty">No products yet. Add them in WordPress → Products → Add New, or use Bulk Upload.</div>'; ?>
+
+<div class="more"><a href="<?php echo esc_url($shop); ?>"><button type="button">SHOP ALL PRODUCTS</button></a></div>
 
 <section class="sell"><div><h3>Sell on Hassence</h3><p>Open your own store, list your products and reach customers across Pakistan.</p></div><a class="btn" href="<?php echo esc_url(wc_get_page_permalink('myaccount')); ?>">Start selling →</a></section>
 </main>

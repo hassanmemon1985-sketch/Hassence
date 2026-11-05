@@ -42,16 +42,15 @@ add_action('wp_footer', function () {
 <p>Do you want to download the APK file for hassence.com?</p>
 <div class="app-b"><a class="app-yes" href="<?php echo esc_url($apk); ?>" download>Yes, download</a><button type="button" class="app-no">No</button></div>
 </div>
-<a class="app-fab" id="appFab" href="<?php echo esc_url($apk); ?>" download hidden>📲 Get the app</a>
 <script>
 (function(){
-var p=document.getElementById('appPop'),f=document.getElementById('appFab');if(!p)return;
+var p=document.getElementById('appPop');if(!p)return;
 var force=/[?&]apk=1/.test(location.search),ua=navigator.userAgent;
 var inApp=matchMedia('(display-mode: standalone)').matches||document.referrer.indexOf('android-app://')===0||/;\s*wv\)/.test(ua);
 if(inApp||(!force&&!/Android/i.test(ua)))return;
 var K='hs_app_ask',seen=false;try{seen=!!localStorage.getItem(K)}catch(e){}
-if(force||!seen)setTimeout(function(){p.hidden=false},2500);else f.hidden=false;
-function done(v){try{localStorage.setItem(K,v)}catch(e){}p.hidden=true;f.hidden=false}
+if(force||!seen)setTimeout(function(){p.hidden=false},2500);
+function done(v){try{localStorage.setItem(K,v)}catch(e){}p.hidden=true}
 p.querySelector('.app-yes').addEventListener('click',function(){done('yes')});
 p.querySelector('.app-no').addEventListener('click',function(){done('no')});
 p.querySelector('.app-x').addEventListener('click',function(){done('no')});

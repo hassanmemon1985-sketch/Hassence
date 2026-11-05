@@ -88,3 +88,57 @@ document.addEventListener('click',function(e){
 });
 document.addEventListener('keydown',function(e){if(e.key==='Escape'){var m=document.getElementById('qrm');if(m)m.hidden=true}});
 })();
+
+(function(){
+document.addEventListener('click',function(e){
+ var m=e.target.closest('.buy-mini');
+ if(m){e.preventDefault();var b=document.querySelector('form.cart .buy-now');if(b)b.click();return}
+ var g=e.target.closest('.get-app[data-soon]');
+ if(g){e.preventDefault();alert('The Hassence app is coming soon.')}
+});
+})();
+
+(function(){
+document.addEventListener('click',function(e){
+ var b=e.target.closest('.car');if(!b)return;
+ var t=b.parentNode.querySelector('.crow-track');
+ if(t)t.scrollBy({left:(b.classList.contains('l')?-1:1)*Math.max(260,t.clientWidth*.8),behavior:'smooth'});
+});
+})();
+
+(function(){
+document.addEventListener('submit',function(e){
+ var f=e.target;if(!f||!f.matches||!f.matches('form.cart'))return;
+ var box=document.querySelector('.pdp-sizes');if(!box)return;
+ var sel=[].slice.call(box.querySelectorAll('input:checked'));
+ if(!sel.length){e.preventDefault();e.stopImmediatePropagation();box.classList.add('need');box.scrollIntoView({behavior:'smooth',block:'center'});return}
+ f.querySelectorAll('input[name="hs_size[]"]').forEach(function(x){x.remove()});
+ sel.forEach(function(s){var h=document.createElement('input');h.type='hidden';h.name='hs_size[]';h.value=s.value;f.appendChild(h)});
+},true);
+document.addEventListener('change',function(e){if(e.target.closest&&e.target.closest('.pdp-sizes'))e.target.closest('.pdp-sizes').classList.remove('need')});
+})();
+
+(function(){
+if(matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+var tr=[].slice.call(document.querySelectorAll('.crow-track'));if(!tr.length)return;
+var st=tr.map(function(t,i){return{t:t,dir:1,x:0,v:34+(i%4)*6,pause:0}});
+st.forEach(function(s){
+ ['touchstart','pointerdown','wheel'].forEach(function(ev){s.t.addEventListener(ev,function(){s.pause=performance.now()+4500},{passive:true})});
+ s.t.addEventListener('mouseenter',function(){s.pause=Infinity});
+ s.t.addEventListener('mouseleave',function(){s.pause=performance.now()+800});
+});
+var last=performance.now();
+function tick(now){
+ var dt=Math.min(60,now-last);last=now;
+ st.forEach(function(s){
+  if(now<s.pause)return;var t=s.t,max=t.scrollWidth-t.clientWidth;if(max<=4)return;
+  var r=t.getBoundingClientRect();if(r.bottom<0||r.top>innerHeight)return;
+  if(Math.abs(t.scrollLeft-Math.round(s.x))>2)s.x=t.scrollLeft;
+  s.x+=s.dir*s.v*dt/1000;
+  if(s.x>=max){s.x=max;s.dir=-1}else if(s.x<=0){s.x=0;s.dir=1}
+  t.scrollLeft=s.x;
+ });
+ requestAnimationFrame(tick);
+}
+requestAnimationFrame(tick);
+})();

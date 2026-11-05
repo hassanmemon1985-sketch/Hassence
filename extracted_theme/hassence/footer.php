@@ -6,8 +6,8 @@
 <div><span>🔒</span><div><b>Secure Payment</b>100% protected</div></div>
 </div><div class="wrap">
 <div><h5>Hassence</h5><p>hassence.com – fragrances, fashion, beauty, electronics and more.</p><p>info@hassence.com</p><p>Gurumandir, Jamsheed Quarters, Karachi, Pakistan</p></div>
-<div><h5>Customer Care</h5><p><a href="<?php echo esc_url(hs_page_url('help-center')); ?>">Help Center</a></p><p><a href="<?php echo esc_url(hs_page_url('how-to-buy')); ?>">How to Buy</a></p><p><a href="<?php echo esc_url(hs_page_url('return-refund-policy')); ?>">Returns &amp; Refunds</a></p></div>
-<div><h5>About</h5><p><a href="<?php echo esc_url(hs_page_url('about-us')); ?>">About Us</a></p><p><a href="<?php echo esc_url(hs_page_url('careers')); ?>">Careers</a></p><p><a href="<?php echo esc_url(hs_page_url('contact-us')); ?>">Contact</a></p></div>
+<div><h5>Customer Care</h5><p><a href="<?php echo esc_url(hs_page_url('help-center')); ?>">Help Center</a></p><p><a href="<?php echo esc_url(hs_page_url('how-to-buy')); ?>">How to Buy</a></p><p><a href="<?php echo esc_url(hs_page_url('return-refund-policy')); ?>">Returns &amp; Refunds</a></p><?php $hs_apk = get_theme_mod('hs_apk_url', ''); ?><p><a class="get-app" href="<?php echo $hs_apk ? esc_url($hs_apk) : '#'; ?>"<?php echo $hs_apk ? ' download' : ' data-soon="1"'; ?>>📲 Get the app</a></p></div>
+<div><h5>About</h5><p><a href="<?php echo esc_url(hs_page_url('about-us')); ?>">About Us</a></p><p><a href="<?php echo esc_url(hs_page_url('careers')); ?>">Careers</a></p><p><a href="<?php echo esc_url(hs_page_url('contact-us')); ?>">Contact</a></p><p><a href="<?php echo esc_url(hs_page_url('daraz')); ?>">⚡ Daraz Deals</a></p></div>
 <div><h5>Payments</h5><p>Cash on Delivery</p><p><button type="button" class="qr-open">Easypaisa / Raast QR</button></p></div>
 </div></footer>
 <a class="wa-float" href="<?php echo esc_url(hs_wa_link()); ?>" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><?php echo hs_wa_svg(34); ?></a>
