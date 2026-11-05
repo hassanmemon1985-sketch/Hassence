@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hassence — Black &amp; Gold Preview</title>
+<link rel="stylesheet" href="../plugins/hassence-perfume/assets/perfume.css">
+<style>
+    /* Minimal base that mimics the live Hassence theme for this preview only */
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; line-height: 1.4; }
+    a { color: inherit; text-decoration: none; }
+    .wrap { max-width: 1300px; margin: auto; padding: 0 16px; }
+    .fbar { display: flex; align-items: center; gap: 14px; padding: 8px 22px; font-size: 13px; font-weight: 700; }
+    .fbar .fmq { flex: 1; overflow: hidden; white-space: nowrap; }
+    .fbar .mq span { margin-right: 42px; }
+    .fbar .cursel { padding: 5px 10px; border-radius: 20px; font-size: 12px; }
+    .hrow { display: flex; align-items: center; gap: 20px; padding: 12px 22px; }
+    .logo { font-size: 28px; font-weight: 900; letter-spacing: 3px; }
+    .logo b { font-weight: inherit; }
+    .search { flex: 0 1 420px; margin-left: auto; display: flex; border: 1px solid; border-radius: 30px; overflow: hidden; }
+    .search input { flex: 1; border: 0; padding: 9px 14px; outline: 0; min-width: 0; }
+    .search button { border: 0; padding: 0 18px; font-weight: 700; cursor: pointer; }
+    .icons { display: flex; align-items: center; gap: 16px; font-size: 20px; }
+    .icons sup { font-size: 11px; border-radius: 10px; padding: 1px 6px; margin-left: 2px; }
+    .hsp-main { padding-top: 0; padding-bottom: 40px; }
+    .p .img { aspect-ratio: 1/1; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+    .p .img img { width: 100%; height: 100%; object-fit: contain; padding: 6px; }
+    .p .nm { font-size: 13px; margin-top: 8px; height: 36px; overflow: hidden; }
+    .p .pr { font-weight: 800; font-size: 16px; }
+    .p .badge { position: absolute; top: 8px; left: 8px; padding: 2px 7px; border-radius: 3px; font-size: 11px; font-weight: 700; }
+    .p .cart { position: absolute; right: 8px; bottom: 8px; width: 34px; height: 34px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 18px; font-weight: 800; }
+    footer { padding: 30px 0; font-size: 13px; }
+    footer .wrap { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    footer h5 { margin: 0 0 8px; font-size: 13px; letter-spacing: 1px; text-transform: uppercase; }
+    footer p { margin: 5px 0; }
+    .preview-note { max-width: 1300px; margin: 0 auto; padding: 10px 16px; font-size: 12px; color: #a89e8c; border-bottom: 1px solid #2b2519; }
+</style>
+</head>
+<body>
+
+<div class="preview-note">DESIGN PREVIEW — this is a static mock of the new homepage. The real version is applied by the Hassence Perfume Mode plugin inside WordPress.</div>
+
+<div class="fbar">
+    <div class="fmq"><div class="mq"><span>100% original perfumes</span><span>Cash on Delivery across Pakistan</span><span>Free delivery on orders over Rs. 5,000</span><span>Easypaisa / Raast accepted</span></div></div>
+    <select class="cursel" aria-label="Currency"><option>PKR</option></select>
+</div>
+<div class="hrow">
+    <a class="logo" href="#"><b class="lg1">HAS</b><b class="lg2">SENCE</b></a>
+    <form class="search"><input type="search" placeholder="Search perfumes, oud, attar…"><button type="button">Search</button></form>
+    <div class="icons"><a href="#">👤</a><a href="#">🛒<sup>0</sup></a></div>
+</div>
+
+<section class="hsp-flash" aria-label="Flash sale">
+    <div class="hsp-flash-inner">
+        <div class="hsp-flash-copy">
+            <span class="hsp-flash-tag">Flash sale</span>
+            <div>
+                <h2>Up to <em>70% off</em> signature perfumes</h2>
+                <p>Limited stock. Offer ends at midnight.</p>
+            </div>
+        </div>
+        <div class="hsp-flash-timer" data-hsp-countdown aria-label="Time left in the flash sale">
+            <span class="hsp-flash-time"><b data-hsp-h>00</b><small>Hrs</small></span>
+            <i>:</i>
+            <span class="hsp-flash-time"><b data-hsp-m>00</b><small>Min</small></span>
+            <i>:</i>
+            <span class="hsp-flash-time"><b data-hsp-s>00</b><small>Sec</small></span>
+        </div>
+        <a class="hsp-flash-btn" href="#">Shop the sale <span aria-hidden="true">&rarr;</span></a>
+    </div>
+</section>
+
+<section class="hsp-hero" style="background-image:url('https://hassence.com/wp-content/uploads/2026/10/Golden-Glow-Fragrance-Collection.png')">
+    <div class="hsp-hero-inner">
+        <p class="hsp-eyebrow">Hassence &middot; Karachi &middot; Perfume House</p>
+        <h1>Find your <em>signature</em> scent.</h1>
+        <p>Long-lasting fragrances for men, women and everyone in between. Handpicked, affordable and delivered across Pakistan.</p>
+        <div class="hsp-actions">
+            <a class="hsp-btn" href="#">Shop perfumes</a>
+            <a class="hsp-btn ghost" href="#hsp-shop">Shop by gender</a>
+        </div>
+        <p class="hsp-hero-note">Cash on Delivery &middot; Easypaisa / Raast &middot; 100% original</p>
+    </div>
+</section>
+
+<main class="wrap hsp-main">
+
+    <div class="hsp-trust">
+        <div><b>100% original</b><span>Quality checked</span></div>
+        <div><b>Cash on Delivery</b><span>Pay at your door</span></div>
+        <div><b>Across Pakistan</b><span>Fast courier delivery</span></div>
+        <div><b>Need help?</b><span>WhatsApp us anytime</span></div>
+    </div>
+
+    <section class="hsp-section" id="hsp-shop">
+        <div class="hsp-head">
+            <div><p class="hsp-eyebrow">Shop by</p><h2 class="hsp-title">Who is it for?</h2></div>
+            <a class="hsp-all" href="#">All perfumes &rsaquo;</a>
+        </div>
+        <div class="hsp-tiles">
+            <a class="hsp-tile" href="#" style="background-image:url('https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-11.24.25-AM.jpeg')">
+                <span><b>For him</b><span>Bold, woody and fresh scents</span><i>Explore &rsaquo;</i></span>
+            </a>
+            <a class="hsp-tile" href="#" style="background-image:url('https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-11.24.26-AM.jpeg')">
+                <span><b>For her</b><span>Floral, fruity and sweet scents</span><i>Explore &rsaquo;</i></span>
+            </a>
+            <a class="hsp-tile" href="#" style="background-image:url('https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-11.24.35-AM.jpeg')">
+                <span><b>For everyone</b><span>Shared scents for any day</span><i>Explore &rsaquo;</i></span>
+            </a>
+        </div>
+    </section>
+
+    <section class="hsp-section">
+        <div class="hsp-head">
+            <div><p class="hsp-eyebrow">Most loved</p><h2 class="hsp-title">Best sellers</h2></div>
+            <a class="hsp-all" href="#">View all &rsaquo;</a>
+        </div>
+        <div class="hsp-grid">
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-23-at-2.46.12-PM.jpeg" alt="Lasting Memories"></a><span class="badge">SALE</span><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Lasting Memories Unisex Perfume 50ml</a></div><div class="pr"><ins>Rs 2,450</ins></div></div>
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-11.24.25-AM.jpeg" alt="Aventus"></a><span class="badge">-31%</span><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Hassence Aventus Creed Swiss Eau de Parfum for Men 100ml</a></div><div class="pr"><del>Rs 3,000</del> <ins>Rs 2,060</ins></div></div>
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-11.24.35-AM.jpeg" alt="Erba Pura"></a><span class="badge">-29%</span><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Hassence Erba Pura Eau de Parfum 100ml</a></div><div class="pr"><del>Rs 3,500</del> <ins>Rs 2,500</ins></div></div>
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-11.24.32-AM-1.jpeg" alt="Sauvage"></a><span class="badge">-29%</span><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Hassence Sauvage Swiss Eau de Parfum for Men 100ml</a></div><div class="pr"><del>Rs 3,500</del> <ins>Rs 2,500</ins></div></div>
+        </div>
+    </section>
+
+    <section class="hsp-section">
+        <div class="hsp-head">
+            <div><p class="hsp-eyebrow">Just landed</p><h2 class="hsp-title">New arrivals</h2></div>
+            <a class="hsp-all" href="#">View all &rsaquo;</a>
+        </div>
+        <div class="hsp-grid">
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-23-at-2.46.14-PM-1.jpeg" alt="Soulmark"></a><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Soulmark For Unisex 50ml</a></div><div class="pr"><ins>Rs 2,150</ins></div></div>
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-23-at-2.46.14-PM-2.jpeg" alt="Naqsh"></a><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Naqsh For Unisex and Men 50ml</a></div><div class="pr"><ins>Rs 2,599</ins></div></div>
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-22-at-11.24.26-AM.jpeg" alt="Yara Pink"></a><span class="badge">-23%</span><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Hassence Yara Pink by Lattafa 100ml</a></div><div class="pr"><del>Rs 3,500</del> <ins>Rs 2,700</ins></div></div>
+            <div class="p"><div class="img"><a class="imga" href="#"><img src="https://hassence.com/wp-content/uploads/2026/10/WhatsApp-Image-2026-10-23-at-2.46.11-PM.jpeg" alt="Soft Touch"></a><a class="cart" href="#">+</a></div><div class="nm"><a href="#">Soft Touch For Women 50ml</a></div><div class="pr"><ins>Rs 1,999</ins></div></div>
+        </div>
+    </section>
+
+    <section class="hsp-section">
+        <div class="hsp-head">
+            <div><p class="hsp-eyebrow">The Hassence promise</p><h2 class="hsp-title">Why shop with us</h2></div>
+        </div>
+        <div class="hsp-promise">
+            <div><b>Long-lasting formulas</b><p>High-concentration fragrances made to stay with you through the day.</p></div>
+            <div><b>Honest prices</b><p>Premium scent profiles without the designer price tag.</p></div>
+            <div><b>Easy ordering</b><p>Cash on Delivery or Easypaisa / Raast QR. Delivered by courier across Pakistan.</p></div>
+        </div>
+    </section>
+
+    <section class="hsp-section">
+        <div class="hsp-head">
+            <div><p class="hsp-eyebrow">Simple &amp; safe</p><h2 class="hsp-title">How to order</h2></div>
+        </div>
+        <div class="hsp-steps">
+            <div class="hsp-step"><span>1</span><b>Choose your perfume</b><small>Browse men’s, women’s and unisex scents.</small></div>
+            <div class="hsp-step"><span>2</span><b>Add it to your cart</b><small>Check the size and quantity, then checkout.</small></div>
+            <div class="hsp-step"><span>3</span><b>Pay at your door</b><small>Cash on Delivery, or Easypaisa / Raast QR.</small></div>
+        </div>
+    </section>
+
+    <div class="hsp-help">
+        <div><b>Not sure which scent to choose?</b><small>Send us a message and we will help you find the right perfume.</small></div>
+        <a class="hsp-btn" href="#">Chat on WhatsApp</a>
+    </div>
+
+    <div class="more"><a href="#"><button type="button">SHOP ALL PERFUMES</button></a></div>
+
+</main>
+
+<footer>
+    <div class="wrap">
+        <div><h5>Hassence</h5><p>Hassence is a perfume house in Karachi, Pakistan. Men’s, women’s and unisex fragrances with Cash on Delivery.</p><p>info@hassence.com</p></div>
+        <div><h5>Customer Care</h5><p>Help Center</p><p>How to Buy</p><p>Returns &amp; Refunds</p></div>
+        <div><h5>About</h5><p>About Us</p><p>Contact</p></div>
+        <div><h5>Payments</h5><p>Cash on Delivery</p><p>Easypaisa / Raast QR</p></div>
+    </div>
+</footer>
+
+<script>
+(function () {
+    var countdown = document.querySelector('[data-hsp-countdown]');
+    if (!countdown) return;
+    var end = new Date();
+    end.setHours(24, 0, 0, 0);
+    var h = countdown.querySelector('[data-hsp-h]');
+    var m = countdown.querySelector('[data-hsp-m]');
+    var s = countdown.querySelector('[data-hsp-s]');
+    function pad(n) { return n < 10 ? '0' + n : String(n); }
+    function tick() {
+        var diff = end - Date.now();
+        if (diff <= 0) return;
+        var total = Math.floor(diff / 1000);
+        h.textContent = pad(Math.floor(total / 3600));
+        m.textContent = pad(Math.floor((total % 3600) / 60));
+        s.textContent = pad(total % 60);
+    }
+    tick();
+    setInterval(tick, 1000);
+})();
+</script>
+
+</body>
+</html>

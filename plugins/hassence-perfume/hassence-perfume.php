@@ -3,7 +3,7 @@
 Plugin Name: Hassence Perfume Mode
 Plugin URI: https://hassence.com
 Description: Turns Hassence into a perfume-only store: black & gold storefront, men/women/unisex categories, a perfume home page, and safe cleanup of non-perfume products. Keeps the current Hassence theme, logo and fonts.
-Version: 2.0.0
+Version: 2.1.0
 Author: Hassence
 License: GPL-2.0-or-later
 Text Domain: hassence-perfume
@@ -11,7 +11,7 @@ Text Domain: hassence-perfume
 
 if (!defined('ABSPATH')) exit;
 
-define('HSP_VERSION', '2.0.0');
+define('HSP_VERSION', '2.1.0');
 define('HSP_DIR', plugin_dir_path(__FILE__));
 define('HSP_URL', plugin_dir_url(__FILE__));
 

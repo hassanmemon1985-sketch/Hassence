@@ -104,7 +104,30 @@ if (!$hsp_best && function_exists('hs_q')) {
 $hsp_new = function_exists('hs_q') ? hs_q(['limit' => 8, 'category' => $hsp_cat_slugs, 'orderby' => 'date', 'order' => 'DESC']) : [];
 $hsp_oud = function_exists('hs_q') ? hs_q(['limit' => 4, 'category' => ['oud-attar']]) : [];
 $hsp_gift = function_exists('hs_q') ? hs_q(['limit' => 4, 'category' => ['gift-sets']]) : [];
+
+$hsp_flash_url = add_query_arg('hs_sale', 1, $hsp_shop);
+$hsp_flash_end = (new DateTimeImmutable('tomorrow', wp_timezone()))->getTimestamp();
 ?>
+
+<section class="hsp-flash" aria-label="Flash sale">
+    <div class="hsp-flash-inner">
+        <div class="hsp-flash-copy">
+            <span class="hsp-flash-tag">Flash sale</span>
+            <div>
+                <h2>Up to <em>70% off</em> signature perfumes</h2>
+                <p>Limited stock. Offer ends at midnight.</p>
+            </div>
+        </div>
+        <div class="hsp-flash-timer" data-hsp-countdown data-end="<?php echo esc_attr($hsp_flash_end); ?>" aria-label="Time left in the flash sale">
+            <span class="hsp-flash-time"><b data-hsp-h>00</b><small>Hrs</small></span>
+            <i>:</i>
+            <span class="hsp-flash-time"><b data-hsp-m>00</b><small>Min</small></span>
+            <i>:</i>
+            <span class="hsp-flash-time"><b data-hsp-s>00</b><small>Sec</small></span>
+        </div>
+        <a class="hsp-flash-btn" href="<?php echo esc_url($hsp_flash_url); ?>">Shop the sale <span aria-hidden="true">&rarr;</span></a>
+    </div>
+</section>
 
 <section class="hsp-hero" style="background-image:url('<?php echo esc_url($hsp_hero); ?>')">
     <div class="hsp-hero-inner">

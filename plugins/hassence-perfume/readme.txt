@@ -4,7 +4,7 @@ Tags: perfume, woocommerce, hassence, black gold
 Requires at least: 6.0
 Tested up to: 7.1
 Requires PHP: 7.4
-Stable tag: 2.0.0
+Stable tag: 2.1.0
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -14,7 +14,8 @@ Turns Hassence into a perfume-only store with a black & gold storefront, Men / W
 
 This plugin keeps your current Hassence theme, logo, fonts and WooCommerce setup. It adds:
 
-* A perfume home page (hero, shop by gender, best sellers, new arrivals, oud & attar, gift sets, how to order, WhatsApp help).
+* A perfume home page (flash sale banner, hero, shop by gender, best sellers, new arrivals, oud & attar, gift sets, how to order, WhatsApp help).
+* A prominent black & gold flash-sale banner with a live countdown and a direct link to products on sale.
 * Black & gold styling layered over the existing theme.
 * Product categories: Men's Perfume, Women's Perfume, Unisex Perfume, Oud & Attar, Gift Sets.
 * Product tags: Best Sellers, New Arrivals.
@@ -24,7 +25,7 @@ This plugin keeps your current Hassence theme, logo, fonts and WooCommerce setup
 == Installation ==
 
 1. In WordPress go to Plugins → Add New → Upload Plugin.
-2. Choose `hassence-perfume-2.0.0.zip` and click Install Now.
+2. Choose `hassence-perfume-2.1.0.zip` and click Install Now.
 3. Click Activate.
 4. Open the new **Perfume Mode** menu in the WordPress sidebar.
 5. Click **Create categories & organise perfumes**.
@@ -48,6 +49,10 @@ Hiding and moving to Trash are reversible with the "Restore hidden / trashed pro
 No. Products in a perfume category, products with a perfume keyword in the name, and products flagged as perfumes are always protected.
 
 == Changelog ==
+
+= 2.1.0 =
+* Prominent flash-sale banner on the homepage with a live countdown and a Shop the sale link.
+* Flash banner is responsive on mobile and uses the store timezone.
 
 = 2.0.0 =
 * Black & gold storefront styling.

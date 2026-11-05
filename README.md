@@ -12,7 +12,7 @@ product catalogue and the build/deployment notes.
 | Folder / File | Purpose |
 | --- | --- |
 | `plugins/hassence-perfume/` | **Hassence Perfume Mode** plugin: black & gold styling, perfume home page, Men/Women/Unisex categories, safe product clean-up |
-| `dist/hassence-perfume-2.0.0.zip` | Upload this ZIP in WordPress → Plugins → Add New → Upload Plugin |
+| `dist/hassence-perfume-2.1.0.zip` | Upload this ZIP in WordPress → Plugins → Add New → Upload Plugin |
 | `docs/PERFUME-PIVOT-PLAN.md` | Full audit, connection status and launch plan |
 | `docs/GO-LIVE-CHECKLIST.md` | Step-by-step go-live instructions |
 | `docs/perfume-catalog.csv` | The 21 perfumes with gender/collection mapping |

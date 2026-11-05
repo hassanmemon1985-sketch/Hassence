@@ -231,6 +231,136 @@ input[type="submit"].button,
     color: var(--hsp-gold) !important;
 }
 
+/* ---------- Flash sale banner ---------- */
+.hsp-flash {
+    position: relative;
+    z-index: 2;
+    background: linear-gradient(90deg, #a9842f 0%, #e3c87e 50%, #a9842f 100%);
+    color: #080808;
+    border-bottom: 1px solid #8a6d2a;
+}
+.hsp-flash-inner {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 15px 20px;
+}
+.hsp-flash-copy {
+    display: flex;
+    flex: 1 1 auto;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+}
+.hsp-flash-tag {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    padding: 8px 12px;
+    border-radius: 2px;
+    background: #080808;
+    color: var(--hsp-gold-light);
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: .18em;
+    line-height: 1;
+    text-transform: uppercase;
+}
+.hsp-flash h2 {
+    margin: 0;
+    color: #080808;
+    font-size: clamp(17px, 2vw, 26px);
+    font-weight: 800;
+    letter-spacing: -.02em;
+    line-height: 1.12;
+}
+.hsp-flash h2 em {
+    font-style: normal;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+}
+.hsp-flash p {
+    margin: 3px 0 0;
+    color: #3b2f12;
+    font-size: 12px;
+    font-weight: 600;
+}
+.hsp-flash-timer {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 5px;
+}
+.hsp-flash-time {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 48px;
+    height: 48px;
+    border-radius: 4px;
+    background: #080808;
+    color: var(--hsp-gold-light);
+    line-height: 1;
+}
+.hsp-flash-time b {
+    font-size: 17px;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: .02em;
+}
+.hsp-flash-time small {
+    margin-top: 3px;
+    color: var(--hsp-muted);
+    font-size: 8px;
+    font-weight: 800;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+}
+.hsp-flash-timer i {
+    color: #080808;
+    font-style: normal;
+    font-weight: 800;
+}
+.hsp-flash-btn {
+    display: inline-flex;
+    flex: 0 0 auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 48px;
+    padding: 12px 22px;
+    border: 1px solid #080808;
+    border-radius: 2px;
+    background: #080808;
+    color: var(--hsp-gold-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    transition: .2s ease;
+}
+.hsp-flash-btn:hover {
+    background: #fff;
+    border-color: #fff;
+    color: #080808;
+    transform: translateY(-1px);
+}
+.hsp-flash-btn span { font-size: 16px; line-height: 1; }
+.hsp-flash-over {
+    padding: 12px 16px;
+    border-radius: 4px;
+    background: #080808;
+    color: var(--hsp-gold-light);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
 /* ---------- Homepage hero ---------- */
 .hsp-hero {
     position: relative;
@@ -773,6 +903,8 @@ footer a[href*="/daraz"],
 @media (max-width: 1000px) {
     .hsp-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .hsp-hero { min-height: 560px; }
+    .hsp-flash-inner { flex-wrap: wrap; gap: 12px 18px; }
+    .hsp-flash-copy { flex-basis: 100%; }
 }
 @media (max-width: 760px) {
     .hsp-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
@@ -788,6 +920,13 @@ footer a[href*="/daraz"],
     .hsp-help { padding: 20px; }
     .hsp-help .hsp-btn { width: 100%; }
     .hsp-section { margin-bottom: 36px; }
+    .hsp-flash-inner { padding: 14px 16px; gap: 12px; }
+    .hsp-flash-copy { flex-direction: column; align-items: flex-start; gap: 8px; }
+    .hsp-flash h2 { font-size: 20px; }
+    .hsp-flash p { font-size: 11px; }
+    .hsp-flash-timer { flex: 1 1 auto; }
+    .hsp-flash-btn { flex: 1 1 auto; min-height: 44px; padding: 11px 16px; }
+    .hsp-flash-time { min-width: 44px; height: 44px; }
 }
 @media (max-width: 420px) {
     .hsp-grid { grid-template-columns: 1fr; }

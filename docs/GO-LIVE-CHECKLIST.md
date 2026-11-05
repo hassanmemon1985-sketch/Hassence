@@ -1,6 +1,6 @@
 # Hassence — Go-Live Checklist
 
-**Plugin file:** `dist/hassence-perfume-2.0.0.zip`
+**Plugin file:** `dist/hassence-perfume-2.1.0.zip`
 **WordPress:** https://hassence.com/wp-admin
 **cPanel:** https://srv31.easyhost.pk:2083
 
@@ -20,7 +20,7 @@ Do not skip this. The clean-up deletes the 61 non-perfume products permanently w
 
 ## Step 1 — Upload the plugin
 
-1. Download `hassence-perfume-2.0.0.zip` from the project's `dist/` folder.
+1. Download `hassence-perfume-2.1.0.zip` from the project's `dist/` folder.
 2. WordPress → **Plugins → Add New → Upload Plugin**.
 3. Choose the ZIP → **Install Now** → **Activate**.
 4. A new **Perfume Mode** menu appears in the left sidebar.
@@ -86,11 +86,13 @@ LiteSpeed Cache is active on the server.
 
 Open these pages on mobile and desktop:
 
-- [ ] https://hassence.com — black & gold hero, Men/Women/Unisex tiles, Best Sellers, New Arrivals.
+- [ ] https://hassence.com — gold **Flash Sale** banner with countdown, black & gold hero, Men/Women/Unisex tiles, Best Sellers, New Arrivals.
+- [ ] Flash banner **Shop the sale** link opens the sale products.
 - [ ] https://hassence.com/shop/ — only perfumes, no clothing/furniture.
 - [ ] A product page — price, notes, **Buy now**, trust badges, description, shipping info.
 - [ ] Add to cart → cart page — quantity, coupon, totals.
 - [ ] Checkout — phone, address, city, Cash on Delivery, Easypaisa / Raast QR.
+- [ ] Switch payment method — only the selected gateway's description stays open.
 - [ ] Place a test order (you can cancel it in WooCommerce → Orders).
 - [ ] https://hassence.com/my-account/ — no vendor/seller dashboard.
 - [ ] Footer — no Daraz, no "Get the app", perfume-only description.
@@ -170,7 +172,7 @@ The theme already includes `inc/country.php` and `inc/currency.php`. Configure t
 | Path | Purpose |
 | --- | --- |
 | `plugins/hassence-perfume/` | Plugin source |
-| `dist/hassence-perfume-2.0.0.zip` | Upload this to WordPress |
+| `dist/hassence-perfume-2.1.0.zip` | Upload this to WordPress |
 | `docs/PERFUME-PIVOT-PLAN.md` | Full audit and plan |
 | `docs/perfume-catalog.csv` | The 21 perfumes with gender/collection mapping |
 | `docs/GO-LIVE-CHECKLIST.md` | This file |
