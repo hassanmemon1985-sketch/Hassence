@@ -101,7 +101,10 @@ if (!$hsp_best && function_exists('hs_q')) {
     $hsp_best = hs_q(['limit' => 8, 'category' => $hsp_cat_slugs, 'orderby' => 'popularity', 'order' => 'DESC']);
 }
 
-$hsp_new = function_exists('hs_q') ? hs_q(['limit' => 8, 'category' => $hsp_cat_slugs, 'orderby' => 'date', 'order' => 'DESC']) : [];
+$hsp_new = function_exists('hs_q') ? hs_q(['limit' => 8, 'category' => $hsp_cat_slugs, 'tag' => ['new-arrivals'], 'orderby' => 'date', 'order' => 'DESC']) : [];
+if (!$hsp_new && function_exists('hs_q')) {
+    $hsp_new = hs_q(['limit' => 8, 'category' => $hsp_cat_slugs, 'orderby' => 'date', 'order' => 'DESC']);
+}
 $hsp_oud = function_exists('hs_q') ? hs_q(['limit' => 4, 'category' => ['oud-attar']]) : [];
 $hsp_gift = function_exists('hs_q') ? hs_q(['limit' => 4, 'category' => ['gift-sets']]) : [];
 
@@ -115,7 +118,7 @@ $hsp_flash_end = (new DateTimeImmutable('tomorrow', wp_timezone()))->getTimestam
             <span class="hsp-flash-tag">Flash sale</span>
             <div>
                 <h2>Up to <em>70% off</em> signature perfumes</h2>
-                <p>Limited stock. Offer ends at midnight.</p>
+                <p>Limited stock. Offer ends at midnight. &middot; Cash on Delivery &middot; Easypaisa / Raast &middot; 100% original</p>
             </div>
         </div>
         <div class="hsp-flash-timer" data-hsp-countdown data-end="<?php echo esc_attr($hsp_flash_end); ?>" aria-label="Time left in the flash sale">
@@ -131,17 +134,14 @@ $hsp_flash_end = (new DateTimeImmutable('tomorrow', wp_timezone()))->getTimestam
 
 <section class="hsp-hero" style="background-image:url('<?php echo esc_url($hsp_hero); ?>')">
     <div class="hsp-hero-inner">
-        <p class="hsp-eyebrow">Hassence &middot; Karachi &middot; Perfume House</p>
+        <p class="hsp-tagline">Find your signature scent.</p>
         <h1>Find your <em>signature</em> scent.</h1>
-        <p>Long-lasting fragrances for men, women and everyone in between. Handpicked, affordable and delivered across Pakistan.</p>
         <div class="hsp-actions">
             <a class="hsp-btn" href="<?php echo esc_url($hsp_shop); ?>">Shop perfumes</a>
             <a class="hsp-btn ghost" href="#hsp-shop">Shop by gender</a>
         </div>
-        <p class="hsp-hero-note">Cash on Delivery &middot; Easypaisa / Raast &middot; 100% original</p>
     </div>
 </section>
-</div><!-- /.stage -->
 
 <main class="wrap hsp-main">
 

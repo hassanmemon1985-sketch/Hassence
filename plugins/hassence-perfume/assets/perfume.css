@@ -366,7 +366,7 @@ input[type="submit"].button,
     position: relative;
     display: flex;
     align-items: flex-end;
-    min-height: min(76vh, 700px);
+    min-height: 100vh;
     background-color: #050505;
     background-position: center;
     background-size: cover;
@@ -393,6 +393,14 @@ input[type="submit"].button,
     font-size: 11px;
     font-weight: 800;
     letter-spacing: .28em;
+    text-transform: uppercase;
+}
+.hsp-tagline {
+    margin: 0;
+    color: var(--hsp-gold-light);
+    font-size: clamp(12px, 1.4vw, 15px);
+    font-weight: 700;
+    letter-spacing: .32em;
     text-transform: uppercase;
 }
 .hsp-hero h1 {
@@ -425,13 +433,13 @@ input[type="submit"].button,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    min-height: 50px;
-    padding: 14px 30px;
+    min-height: 40px;
+    padding: 10px 18px;
     border: 1px solid var(--hsp-gold);
     border-radius: 2px;
     background: var(--hsp-gold);
     color: #080808;
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 800;
     letter-spacing: .12em;
     text-transform: uppercase;
@@ -447,6 +455,8 @@ input[type="submit"].button,
     background: transparent;
     color: var(--hsp-gold-light);
     border-color: rgba(200, 162, 74, .55);
+    min-height: 40px;
+    padding: 10px 18px;
 }
 .hsp-btn.ghost:hover {
     background: rgba(200, 162, 74, .12);
@@ -524,17 +534,17 @@ input[type="submit"].button,
     gap: 14px;
 }
 
-/* Shop by gender tiles */
+/* Shop by gender tiles -> stacked category menu */
 .hsp-tiles {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 .hsp-tile {
     position: relative;
     display: flex;
     align-items: flex-end;
-    min-height: 260px;
+    min-height: 220px;
     padding: 20px;
     overflow: hidden;
     border: 1px solid var(--hsp-line);
@@ -913,7 +923,7 @@ footer a[href*="/daraz"],
     .hsp-trust { grid-template-columns: repeat(2, 1fr); }
     .hsp-promise,
     .hsp-steps { grid-template-columns: 1fr; }
-    .hsp-hero { min-height: 70vh; }
+    .hsp-hero { min-height: 100vh; }
     .hsp-hero-inner { padding: 70px 16px 42px; }
     .hsp-hero h1 { font-size: clamp(34px, 10vw, 52px); }
     .hsp-head { align-items: flex-start; }
