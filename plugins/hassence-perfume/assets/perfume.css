@@ -977,7 +977,7 @@ footer a[href*="/daraz"],
 }
 .hsp-topbar .hsp-lg1 { font-weight: 900; letter-spacing: 0.28em; font-size: 20px; color: var(--hsp-gold); display: inline-block !important; }
 .hsp-topbar .hsp-lg2 { font-weight: 900; letter-spacing: 0.28em; font-size: 20px; color: var(--hsp-gold-light); display: inline-block !important; }
-.hsp-topbar .hsp-tagline { width: 100%; flex-basis: 100%; text-align: center; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--hsp-gold); margin-top: 2px; display: block !important; }
+/* logo tagline intentionally removed so HASSENCE stays on one line */
 .hsp-topbar .hsp-topactions { display: flex; align-items: center; gap: 6px; }
 .hsp-topicon {
     position: relative;

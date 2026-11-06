@@ -116,7 +116,6 @@ $hsp_flash_end = (new DateTimeImmutable('tomorrow', wp_timezone()))->getTimestam
     <button class="hsp-burger" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button>
     <a class="hsp-logo" href="<?php echo esc_url(home_url('/')); ?>">
         <span class="hsp-lg1">HAS</span><span class="hsp-lg2">SENCE</span>
-        <small class="hsp-tagline">Find your signature scent.</small>
     </a>
     <div class="hsp-topactions">
         <a class="hsp-topicon" href="<?php echo esc_url(add_query_arg('s', '', home_url('/'))); ?>" title="Search">&#128302;</a>
@@ -159,7 +158,6 @@ $hsp_flash_end = (new DateTimeImmutable('tomorrow', wp_timezone()))->getTimestam
 
 <section class="hsp-hero" style="background-image:url('<?php echo esc_url($hsp_hero); ?>')">
     <div class="hsp-hero-inner">
-        <p class="hsp-tagline">Find your signature scent.</p>
         <h1>Find your <em>signature</em> scent.</h1>
         <div class="hsp-actions">
             <a class="hsp-btn" href="<?php echo esc_url($hsp_shop); ?>">Shop perfumes</a>
