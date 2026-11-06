@@ -551,8 +551,8 @@ input[type="submit"].button,
     position: relative;
     display: flex;
     align-items: flex-end;
-    min-height: 220px;
-    padding: 20px;
+    min-height: 180px;
+    padding: 14px;
     overflow: hidden;
     border: 1px solid var(--hsp-line);
     border-radius: 14px;
