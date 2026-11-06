@@ -109,3 +109,20 @@
         });
     });
 })();
+(function () {
+    var drawer = document.querySelector('.hsp-drawer');
+    if (!drawer) return;
+    var backdrop = document.createElement('div');
+    backdrop.className = 'hsp-drawer-backdrop';
+    backdrop.addEventListener('click', function () {
+        drawer.classList.remove('is-open');
+        backdrop.classList.remove('is-open');
+    });
+    document.body.appendChild(backdrop);
+    document.querySelectorAll('.hsp-burger').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            drawer.classList.add('is-open');
+            backdrop.classList.add('is-open');
+        });
+    });
+})();

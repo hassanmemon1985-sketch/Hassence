@@ -89,9 +89,9 @@ if (!function_exists('hsp_tpl_section')) {
 }
 
 $hsp_genders = [
-    ['mens-perfume',   'For him',      'Bold, woody and fresh scents'],
-    ['womens-perfume', 'For her',      'Floral, fruity and sweet scents'],
-    ['unisex-perfume', 'For everyone', 'Shared scents for any day'],
+    ['mens-perfume',   'Men',      'Bold, woody and fresh scents'],
+    ['womens-perfume', 'Women',      'Floral, fruity and sweet scents'],
+    ['unisex-perfume', 'Unisex', 'Shared scents for any day'],
 ];
 
 $hsp_cat_slugs = array_keys(hsp_cats());
@@ -111,6 +111,31 @@ $hsp_gift = function_exists('hs_q') ? hs_q(['limit' => 4, 'category' => ['gift-s
 $hsp_flash_url = add_query_arg('hs_sale', 1, $hsp_shop);
 $hsp_flash_end = (new DateTimeImmutable('tomorrow', wp_timezone()))->getTimestamp();
 ?>
+
+<header class="hsp-topbar">
+    <button class="hsp-burger" type="button" aria-label="Open menu" aria-expanded="false">&#9776;</button>
+    <a class="hsp-logo" href="<?php echo esc_url(home_url('/')); ?>">
+        <span class="hsp-lg1">HAS</span><span class="hsp-lg2">SENCE</span>
+        <small class="hsp-tagline">Find your signature scent.</small>
+    </a>
+    <div class="hsp-topactions">
+        <a class="hsp-topicon" href="<?php echo esc_url(add_query_arg('s', '', home_url('/'))); ?>" title="Search">&#128302;</a>
+        <a class="hsp-topicon hsp-cart" href="<?php echo esc_url($hsp_shop ? wc_get_cart_url() : ''); ?>" aria-label="Cart">&#128722;<span class="hsp-cart-count"><?php echo WC()->cart ? WC()->cart->get_cart_contents_count() : 0; ?></span></a>
+    </div>
+</header>
+<nav class="hsp-drawer" hidden aria-label="Categories">
+    <ul>
+        <li><a href="<?php echo esc_url(hsp_tpl_link('mens-perfume')); ?>">Men</a></li>
+        <li><a href="<?php echo esc_url(hsp_tpl_link('womens-perfume')); ?>">Women</a></li>
+        <li><a href="<?php echo esc_url(hsp_tpl_link('unisex-perfume')); ?>">Unisex</a></li>
+        <li><a href="<?php echo esc_url(hsp_tpl_tag_link('best-sellers')); ?>">Best seller</a></li>
+        <li><a href="<?php echo esc_url(hsp_tpl_tag_link('new-arrivals')); ?>">New arrival</a></li>
+        <li><a href="<?php echo esc_url(hsp_tpl_link('gift-sets')); ?>">Bundles</a></li>
+        <li><a href="<?php echo esc_url(add_query_arg('hs_sale', 1, $hsp_shop)); ?>">Sale</a></li>
+        <li><a href="<?php echo esc_url(hsp_tpl_link('oud-attar')); ?>">Attar best seller</a></li>
+        <li><a href="<?php echo esc_url(hsp_tpl_link('gift-sets')); ?>">Bundle offers</a></li>
+    </ul>
+</nav>
 
 <section class="hsp-flash" aria-label="Flash sale">
     <div class="hsp-flash-inner">

@@ -166,7 +166,14 @@ input[type="submit"].button,
     color: #080808 !important;
 }
 
-.woocommerce span.onsale,
+.woocommerce span.onsale {
+    background: #e31f1f !important;
+    color: #fff !important;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 0.3em 0.6em;
+    font-size: 0.85em;
+}
 .badge,
 .tag {
     background: var(--hsp-gold) !important;
@@ -534,11 +541,11 @@ input[type="submit"].button,
     gap: 14px;
 }
 
-/* Shop by gender tiles -> stacked category menu */
+/* Shop by gender tiles */
 .hsp-tiles {
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
 }
 .hsp-tile {
     position: relative;
@@ -941,3 +948,116 @@ footer a[href*="/daraz"],
 @media (max-width: 420px) {
     .hsp-grid { grid-template-columns: 1fr; }
 }
+
+/* Top bar / hamburger menu injected by the plugin */
+.hsp-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 10px 16px;
+    background: rgba(7, 7, 7, 0.96);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--hsp-line);
+}
+.hsp-topbar .hsp-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 1;
+    margin: 0 auto;
+    color: var(--hsp-text);
+    text-decoration: none;
+    gap: 2px;
+}
+.hsp-topbar .hsp-lg1 { font-weight: 900; letter-spacing: 0.28em; font-size: 20px; color: var(--hsp-gold); }
+.hsp-topbar .hsp-lg2 { font-weight: 900; letter-spacing: 0.28em; font-size: 20px; color: var(--hsp-gold-light); }
+.hsp-topbar .hsp-tagline { font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--hsp-gold); }
+.hsp-topbar .hsp-topactions { display: flex; align-items: center; gap: 6px; }
+.hsp-topicon {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(200, 162, 74, 0.12);
+    color: var(--hsp-gold-light);
+    text-decoration: none;
+    font-size: 18px;
+}
+.hsp-topicon.hsp-cart .hsp-cart-count {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--hsp-gold);
+    color: #080808;
+    font-size: 11px;
+    font-weight: 800;
+    display: grid;
+    place-items: center;
+    line-height: 1;
+}
+.hsp-burger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(200, 162, 74, 0.12);
+    color: var(--hsp-gold-light);
+    border: 1px solid transparent;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    padding: 0;
+}
+body.hassence-perfume .stage .ovl { display: none !important; }
+
+.hsp-drawer {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: min(300px, 86vw);
+    background: #080808;
+    border-right: 1px solid var(--hsp-line);
+    transform: translateX(-100%);
+    transition: transform .25s ease;
+    z-index: 60;
+    padding: 80px 20px 30px;
+    overflow-y: auto;
+}
+.hsp-drawer.is-open { transform: translateX(0); }
+.hsp-drawer-backdrop {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.65);
+    z-index: 55;
+    display: none;
+}
+.hsp-drawer-backdrop.is-open { display: block; }
+.hsp-drawer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+.hsp-drawer a {
+    display: block;
+    padding: 12px 16px;
+    border-radius: 8px;
+    background: rgba(200, 162, 74, 0.08);
+    color: var(--hsp-text);
+    text-decoration: none;
+    font-weight: 700;
+    border: 1px solid rgba(200, 162, 74, 0.15);
+}
+.hsp-drawer a:hover { background: rgba(200, 162, 74, 0.18); }
+
+@media (max-width: 560px) {
+    .hsp-topbar .hsp-lg1,
+    .hsp-topbar .hsp-lg2 { font-size: 18px; }
+}
+
